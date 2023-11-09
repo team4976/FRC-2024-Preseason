@@ -1,0 +1,6 @@
+Julia and Jamie and Gaushi
+1 motor
+while loop
+exit condition -> button press, run on 
+    initialize and end conditons? 
+this is connected to the shooter, but that's electrical's problem 

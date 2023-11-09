@@ -1,0 +1,5 @@
+- one motor
+- togglable
+- motor spins really fast
+- shoots when A button is pressed
+- 
