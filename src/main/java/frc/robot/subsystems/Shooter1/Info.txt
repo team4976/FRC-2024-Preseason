@@ -1,4 +1,4 @@
-Ben and Aaron
+Ben And Aaron
 - one motor
 - togglable
 - motor spins really fast
