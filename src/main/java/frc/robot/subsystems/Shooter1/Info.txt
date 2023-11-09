@@ -1,5 +1,6 @@
+Ben and Aron
 - one motor
 - togglable
 - motor spins really fast
-- shoots when A button is pressed
+- shoots when button is pressed
 - 
