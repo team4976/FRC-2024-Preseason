@@ -9,9 +9,13 @@ public class Shooter1 extends SubsystemBase {
 public class Shooter1{
     public void main(String args[]){
 
+<<<<<<< HEAD:src/main/java/frc/robot/subsystems/Shooter1/Shooter1.java
 
         
             // stuff goes here 
+=======
+            // stuff goes here - Aaron
+>>>>>>> 7da87795916a3c616f5f8012d9f4dd8627cd859c:src/main/java/frc/robot/subsystems/Shooter1/Test.java
         int answer = addnumbers(2,5);
 
     }
@@ -24,3 +28,4 @@ public class Shooter1{
     
     
 }
+
