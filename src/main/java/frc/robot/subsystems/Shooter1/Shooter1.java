@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Shooter1 extends SubsystemBase {
     public Shooter1() {}
-    public boolean shooter1Shoot = false
+    public boolean shooter1Shoot = false;
         
 public class Shooter1{
     public void main(String args[]){
