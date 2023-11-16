@@ -9,7 +9,9 @@ public class hopper extends SubsystemBase {
     }
 //when whatever button is pressed, run hopperToggle command
     public CommandBase hopperToggle() {
-
+//this gets moved to the robot constants/container later it's here for now because [???]
+      public static final TalonSRX hopperMotor = new TalonSRX(41); //41 is the motor id
+        
     return runOnceHopper(
         () -> {
           if (!hopperRun){
@@ -29,8 +31,12 @@ public class hopper extends SubsystemBase {
     @Override
     public void hopperPeriodicRun() {
       if (hopperRun){
-        //spin motor. unsure what commands do that sorry.
+        //set motor PercentOutput (?) to [idk what numbers we want here. what is appropriate]
       }
+      else {
+        //set motor PercentOutput to 0
+      }
+      //unsure how to format those commands, pretty sure they exist
     }
    
   }
