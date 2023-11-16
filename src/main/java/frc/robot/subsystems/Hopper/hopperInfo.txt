@@ -1,6 +1,7 @@
 Julia and Jamie and Gaushi
-1 motor
-while loop
+1 motor, in theory. might end up being two so be ready to modify that
+(or set it up preemtively)
+while loop -> 
 exit condition -> button press, run on 
     initialize and end conditons? 
 this is connected to the shooter, but that's electrical's problem 
