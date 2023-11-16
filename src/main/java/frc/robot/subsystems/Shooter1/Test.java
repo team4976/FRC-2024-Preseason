@@ -3,10 +3,7 @@ package frc.robot.subsystems.Shooter1;
 public class Test{
     public void main(String args[]){
 
-
-
-        
-            // stuff goes here - Aaron Cox
+            // stuff goes here - Aaron
         int answer = addnumbers(2,5);
 
     }
@@ -19,3 +16,4 @@ public class Test{
     
     
 }
+
