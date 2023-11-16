@@ -11,7 +11,8 @@ public class Shooter1{
     public void main(String args[]){
 
             // stuff goes here - Aaron
-        
+            CommandXboxController exampleCommandController = new CommandXboxController(1);
+            exampleCommandController.x().onTrue();
 
     }
     
