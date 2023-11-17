@@ -15,30 +15,13 @@ public class hopper extends SubsystemBase {
         
     return runOnceHopper(
         () -> {
-          /*if (!hopperRun){
-            hopperRun = true;
-        }
-        else {
-            hopperRun = false;
-        }*/
-        //xbox toggle command, easier way to do that
+
         }); 
     }
 
-    public boolean hopperRunning() {
-    // this is in the example subsystem. we might want it? 
-    return hopperRun;
-    }
-
-    @Override
-    public void hopperPeriodicRun() {
-      if (hopperRun){
-        //set motor PercentOutput (?) to [idk what numbers we want here. what is appropriate]
-      }
-      else {
-        //set motor PercentOutput to 0
-      }
-      //unsure how to format those commands, pretty sure they exist
+    public void hopperOn() {
+    hopperMotor1.set(ControlMode.PercentOutput, 0.2);
+    hopperMotor2.set(ControlMode.PercentOutput, 0.2);
     }
    
   }
