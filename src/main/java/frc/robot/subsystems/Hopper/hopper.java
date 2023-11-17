@@ -20,13 +20,17 @@ public class hopper extends SubsystemBase {
         }
         }); 
     }
+
     public boolean hopperRunning() {
-    // this is in the example command. we might want it? 
+    // this is in the example subsystem. we might want it? 
     return hopperRun;
     }
 
     @Override
-    
+    public void hopperPeriodicRun() {
+      if (hopperRun){
+        //spin motor. unsure what commands do that sorry.
+      }
+    }
    
   }
-//i think this isn't how we're meant to do it. :/ 
