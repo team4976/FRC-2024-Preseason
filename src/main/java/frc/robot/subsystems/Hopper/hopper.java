@@ -9,17 +9,19 @@ public class hopper extends SubsystemBase {
     }
 //when whatever button is pressed, run hopperToggle command
     public CommandBase hopperToggle() {
-//this gets moved to the robot constants/container later it's here for now because [???]
-      public static final TalonSRX hopperMotor = new TalonSRX(41); //41 is the motor id
+      //this gets moved to the robot constants/container later it's here for now because [???]
+      public static final TalonSRX hopperMotor1 = new TalonSRX(41); //41 is the motor id
+      public static final TalonSRX hopperMotor2 = new TalonSRX(45);
         
     return runOnceHopper(
         () -> {
-          if (!hopperRun){
+          /*if (!hopperRun){
             hopperRun = true;
         }
         else {
             hopperRun = false;
-        }
+        }*/
+        //xbox toggle command, easier way to do that
         }); 
     }
 
