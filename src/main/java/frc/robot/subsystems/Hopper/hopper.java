@@ -23,7 +23,7 @@ public class hopper extends SubsystemBase {
         () -> {
           /* one-time action goes here *///unsure if we actually need this? 
           //i'm going to leave it in case removing it breaks something
-        });
+        }); 
   }
    /* public void  hopperRun() {
     if (hopperRun){
@@ -34,4 +34,3 @@ public class hopper extends SubsystemBase {
     }
     */
   }
-}
