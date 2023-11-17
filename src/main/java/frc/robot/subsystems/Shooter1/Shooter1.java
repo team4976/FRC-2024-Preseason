@@ -1,6 +1,12 @@
 package frc.robot.subsystems.Shooter1;
 
-public class Test{
+import edu.wpi.first.wpilibj2.command.CommandBase;
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
+
+public class Shooter1 extends SubsystemBase {
+    public Shooter1() {}
+
+public class Shooter1{
     public void main(String args[]){
 
 
