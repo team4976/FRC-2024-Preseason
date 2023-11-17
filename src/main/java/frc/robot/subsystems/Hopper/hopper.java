@@ -9,28 +9,22 @@ public class hopper extends SubsystemBase {
 
 //when whatever button is pressed, run hopperToggle command
     public CommandBase hopperToggle() {
-    if (!hopperRun){
-        hopperRun = true;
-    }
-    else {
-        hopperRun = false;
-    }
-    //the hopperRun command needs to be somewhere else, as a *command* command
-    /*because it needs to run continuously, and constantly check
-    the hopperRun boolean to see if it needs to run motors*/
+    
 
-    return runOnce(
+    return runOnceHopper(
         () -> {
-          /* one-time action goes here *///unsure if we actually need this? 
-          //i'm going to leave it in case removing it breaks something
+          if (!hopperRun){
+            hopperRun = true;
+        }
+        else {
+            hopperRun = false;
+        }
         }); 
-  }
-   /* public void  hopperRun() {
-    if (hopperRun){
-        //insert command to run motor(s) here
     }
-    else {
-        //insert command to stop motor(s) here
+    public boolean hopperRunning() {
+    // this is in the example command. we might want it? 
+    return hopperRun;
     }
-    */
+   
   }
+//i think this isn't how we're meant to do it. :/ 
