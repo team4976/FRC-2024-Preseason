@@ -1,10 +1,12 @@
 package frc.robot.subsystems.Shooter1;
-<<<<<<< HEAD
 
 public class Test{
     public void main(String args[]){
 
-            // stuff goes here - Aaron
+
+
+        
+            // stuff goes here - Aaron Cox
         int answer = addnumbers(2,5);
 
     }
@@ -17,5 +19,3 @@ public class Test{
     
     
 }
-=======
->>>>>>> ea336a4b253fd1c1136778b00be942ca0a120f68
