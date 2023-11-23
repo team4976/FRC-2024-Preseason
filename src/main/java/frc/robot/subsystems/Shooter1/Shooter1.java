@@ -14,7 +14,7 @@ public class Shooter1{
             CommandXboxController exampleCommandController = new CommandXboxController(1);
             exampleCommandController.x(shooterOneShoot.onTrue).onTrue(MotorS1);
             exampleCommandController.x(shooterOneShoot.onTrue).onTrue(MotorS1);
-            public static final TalonSRX MotorSh1 = new TalonSRX(deviceNumber: 45);
+            public static final TalonSRX MotorSh1 = new TalonSRX(deviceNumber: 45); 
 
     }
     
