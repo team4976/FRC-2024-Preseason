@@ -1,21 +1,33 @@
 package frc.robot.subsystems.Shooter1;
 
+import edu.wpi.first.wpilibj.motorcontrol.Talon;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 
 public class Shooter1 extends SubsystemBase {
-    public Shooter1() {}
+
+    public static final Talon MotorSh1 = new TalonSRX(deviceNumber:45); 
     public boolean shooterOneShoot = false;
-}   
-public class Shooter1{
+
     public void main(String args[]){
 
             // stuff goes here - Aaron
             CommandXboxController exampleCommandController = new CommandXboxController(1);
             exampleCommandController.x(shooterOneShoot.onTrue).onTrue(MotorS1);
             exampleCommandController.x(shooterOneShoot.onTrue).onTrue(MotorS1);
-            public static final TalonSRX MotorSh1 = new TalonSRX(deviceNumber: 45); 
+            
 
+    }
+
+    static public void shoot(){
+        MotorSh1.set(18);
+        System.out.println("Shoot Ball");
+
+    }
+
+    static public void stop(){
+        MotorSh1.set(0);
     }
     
     {
