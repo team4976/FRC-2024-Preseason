@@ -12,7 +12,9 @@ public class Shooter1{
 
             // stuff goes here - Aaron
             CommandXboxController exampleCommandController = new CommandXboxController(1);
-            exampleCommandController.x().onTrue();
+            exampleCommandController.x(shooterOneShoot.onTrue).onTrue(MotorS1);
+            exampleCommandController.x(shooterOneShoot.onTrue).onTrue(MotorS1);
+            public static final TalonSRX MotorSh1 = new TalonSRX(deviceNumber: 45);
 
     }
     
