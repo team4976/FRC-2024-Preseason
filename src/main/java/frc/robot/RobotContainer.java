@@ -8,9 +8,14 @@ import frc.robot.Constants.OperatorConstants;
 import frc.robot.commands.Autos;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.ExampleSubsystem;
+
+import java.util.Map;
+
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
+
+import frc.robot.commands.NicksCommands.*;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -21,6 +26,14 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
+
+  private Command driveBackwardsCommand = new DriveBackward();
+  private Command driveForwardCommand = new DriveForward();
+
+  Command[] commands = new Command[]{
+    new DriveBackward(),
+    new DriveForward(),
+  };
 
   // Replace with CommandPS4Controller or CommandJoystick if needed
   private final CommandXboxController m_driverController = new CommandXboxController(OperatorConstants.kDriverControllerPort);
@@ -50,7 +63,21 @@ public class RobotContainer {
     m_driverController.b().whileTrue(m_exampleSubsystem.exampleMethodCommand());
 
 //hopper button
-    m_driverController.x().toggle(hopper.hopperOn());
+    //m_driverController.x().toggle(hopper.hopperOn());
+    
+    double joy_left_pos_Y = m_driverController.getLeftY();
+    if( joy_left_pos_Y != 0){
+
+      if(joy_left_pos_Y < 0){
+
+        driveBackwardsCommand.initialize();
+
+      }else if(joy_left_pos_Y > 0){
+
+        driveForwardCommand.initialize();
+
+      }
+    }
   }
 
   /**
