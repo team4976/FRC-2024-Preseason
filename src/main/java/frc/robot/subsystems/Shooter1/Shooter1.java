@@ -14,7 +14,7 @@ public class Shooter1 extends SubsystemBase {
 
             // stuff goes here - Aaron
             CommandXboxController exampleCommandController = new CommandXboxController(1);
-            exampleCommandController.x(shooterOneShoot.onTrue).onTrue(MotorS1);
+            exampleCommandController.x(shooterOneShoot.onTrue).onTrue(MotorS1,shooterOneShoot = true);
             exampleCommandController.x(shooterOneShoot.onTrue).onTrue(MotorS1);
             
 
@@ -27,7 +27,7 @@ public class Shooter1 extends SubsystemBase {
     }
 
     static public void stop(){
-        MotorSh1.set(0);
+    MotorSh1.set(0);
     }
     
     {
