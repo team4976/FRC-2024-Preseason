@@ -19,7 +19,9 @@ public class Shooter1 extends SubsystemBase {
             
 
     }
-
+//if(u==true){
+//
+//}
     static public void shoot(){
         MotorSh1.set(18);
         System.out.println("Shoot Ball");
