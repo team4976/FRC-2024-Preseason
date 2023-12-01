@@ -1,3 +1,0 @@
-for the drive train we will need
-
-1, an initialize, an execute, isfinished and an end command to run some moters to make the bot move

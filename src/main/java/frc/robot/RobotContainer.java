@@ -26,9 +26,11 @@ import frc.robot.commands.NicksCommands.*;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
+  
+  private final Subsystem nicksSubsystem = new nicks_subsystem();
 
-  private Command driveBackwardsCommand = new DriveBackward();
-  private Command driveForwardCommand = new DriveForward();
+  private Command driveBackwardsCommand;
+  private Command driveForwardCommand;
 
   Command[] commands = new Command[]{
     new DriveBackward(),
@@ -42,6 +44,12 @@ public class RobotContainer {
   public RobotContainer() {
     // Configure the trigger bindings
     configureBindings();
+    setupCommands();
+  }
+
+  public setupCommands(){
+    driveForwardCommand = new nicks_drive_forward_command(nicksSubsystem);
+    driveBackwardsCommand = new nicks_drive_backwards_command(nicksSubsystem);
   }
 
   /**
@@ -55,29 +63,14 @@ public class RobotContainer {
    */
   private void configureBindings() {
     // Schedule `ExampleCommand` when `exampleCondition` changes to `true`
-    new Trigger(m_exampleSubsystem::exampleCondition)
-        .onTrue(new ExampleCommand(m_exampleSubsystem));
-
+    //new Trigger(m_exampleSubsystem::exampleCondition).onTrue(new ExampleCommand(m_exampleSubsystem));
     // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,
     // cancelling on release.
-    m_driverController.b().whileTrue(m_exampleSubsystem.exampleMethodCommand());
+    //m_driverController.b().whileTrue(m_exampleSubsystem.exampleMethodCommand());
 
-//hopper button
-    //m_driverController.x().toggle(hopper.hopperOn());
-    
-    double joy_left_pos_Y = m_driverController.getLeftY();
-    if( joy_left_pos_Y != 0){
+    m_driverController.a().whileTrue(driveForwardCommand.execute());
+    m_driverController.b().whileTrue(driveBackwardsCommand.execute());
 
-      if(joy_left_pos_Y < 0){
-
-        driveBackwardsCommand.initialize();
-
-      }else if(joy_left_pos_Y > 0){
-
-        driveForwardCommand.initialize();
-
-      }
-    }
   }
 
   /**
