@@ -32,7 +32,7 @@ double setMotorSpeed6 = 0.0;//right
     
 }
 
-boolean driveForwardBoolean;
+boolean driveForwardBoolean, movingBoolean;
 
 @Override
 public void initialize(){
@@ -134,7 +134,7 @@ public boolean isfinished(){
 
 @Overide
 public void end(boolean interrupted){
-driveForwardBoolean=false;//drive forward is false
+movingBoolean=false;//drive forward is false
     
 setMotorSpeed1=0.0;//left        the speed of the motors are 0.0, thay are not moving
 setMotorSpeed2=0.0;//left
