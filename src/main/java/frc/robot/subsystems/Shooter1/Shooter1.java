@@ -16,14 +16,17 @@ public class Shooter1 extends SubsystemBase {
             // stuff goes here - Aaron
             CommandXboxController  exampleCommandController = new CommandXboxController(1);
             exampleCommandController.x().onTrue(motor1);
-            exampleCommandController.x();.void onTrue(){ 
+           
+
+            
             if(shooterOneShoot=false){
                 shooterOneShoot=true;
             }
+  
             if(shooterOneShoot=true){
                 shooterOneShoot=false;
             }
-            }
+            
     }
 //if(u==true){
 //
